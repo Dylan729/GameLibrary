@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameLibraryApp.Views.GameDetailsPage"
+             Title="Game Details">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="{Binding Title}"
+                   FontSize="24"
+                   FontAttributes="Bold" />
+
+            <Label Text="{Binding Genre}" />
+            <Label Text="{Binding Platform}" />
+            <Label Text="{Binding ReleaseYear}" />
+            <Label Text="{Binding Rating}" />
+
+            <Label Text="{Binding Description}"
+                   FontSize="16" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,10 +1,13 @@
-﻿namespace GameLibraryApp
+﻿using GameLibraryApp.Views;
+
+namespace GameLibraryApp;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+
+        Routing.RegisterRoute(nameof(GameDetailsPage), typeof(GameDetailsPage));
     }
 }

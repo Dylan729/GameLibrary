@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="GameLibraryApp.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:GameLibraryApp"
-    Title="GameLibraryApp">
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:GameLibraryApp.Views"
+       x:Class="GameLibraryApp.AppShell">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <!-- Main navigation items -->
+    <TabBar>
+        <ShellContent Title="Games"
+                      ContentTemplate="{DataTemplate views:GamesPage}" />
+
+        <ShellContent Title="Wishlist"
+                      ContentTemplate="{DataTemplate views:WishlistPage}" />
+    </TabBar>
 
 </Shell>

@@ -70,4 +70,25 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="10.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Compile Update="Views\GamesDetailsPage.xaml.cs">
+	    <DependentUpon>GamesDetailsPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\GamesPage.xaml.cs">
+	    <DependentUpon>GamesPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\WishlistPage.xaml.cs">
+	    <DependentUpon>WishlistPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\GamesDetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\WishlistPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
