@@ -5,20 +5,53 @@
              Title="Game Details">
 
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="15">
+        <VerticalStackLayout Padding="20" Spacing="20">
 
+            <!-- Game Image -->
+            <Border Stroke="Gray"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 10"
+                    Padding="10">
+                <Image Source="{Binding ImageName}"
+                       HeightRequest="200"
+                       Aspect="AspectFill" />
+            </Border>
+
+            <!-- Game Title -->
             <Label Text="{Binding Title}"
-                   FontSize="24"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <!-- Game Info -->
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,*" ColumnSpacing="10">
+
+                <Label Text="Genre:" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" />
+                <Label Text="{Binding Genre}" Grid.Row="0" Grid.Column="1" />
+
+                <Label Text="Platform:" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" />
+                <Label Text="{Binding Platform}" Grid.Row="1" Grid.Column="1" />
+
+                <Label Text="Release Year:" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" />
+                <Label Text="{Binding ReleaseYear}" Grid.Row="2" Grid.Column="1" />
+
+                <Label Text="Rating:" Grid.Row="3" Grid.Column="0" FontAttributes="Bold" />
+                <Label Text="{Binding Rating}" Grid.Row="3" Grid.Column="1" />
+
+                <Label Text="Wishlist:" Grid.Row="4" Grid.Column="0" FontAttributes="Bold" />
+                <Label Text="{Binding IsInWishlist}" Grid.Row="4" Grid.Column="1" />
+            </Grid>
+
+            <!-- Description -->
+            <Label Text="Description"
+                   FontSize="20"
                    FontAttributes="Bold" />
 
-            <Label Text="{Binding Genre}" />
-            <Label Text="{Binding Platform}" />
-            <Label Text="{Binding ReleaseYear}" />
-            <Label Text="{Binding Rating}" />
-
             <Label Text="{Binding Description}"
-                   FontSize="16" />
+                   FontSize="16"
+                   LineBreakMode="WordWrap" />
 
         </VerticalStackLayout>
     </ScrollView>
+
 </ContentPage>

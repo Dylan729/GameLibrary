@@ -10,7 +10,11 @@ public partial class WishlistPage : ContentPage
     public WishlistPage()
     {
         InitializeComponent();
+        RefreshWishlist();
+    }
 
+    public void RefreshWishlist()
+    {
         var wishlist = _service.GetGames()
                                .Where(g => g.IsInWishlist)
                                .ToList();
