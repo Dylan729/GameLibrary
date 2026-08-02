@@ -22,4 +22,3 @@ namespace GameLibraryApp
             return builder.Build();
         }
     }
-}

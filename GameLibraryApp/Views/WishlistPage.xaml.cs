@@ -1,4 +1,3 @@
-using GameLibraryApp.Services;
 using GameLibraryApp.Models;
 
 namespace GameLibraryApp.Views;
@@ -10,7 +9,6 @@ public partial class WishlistPage : ContentPage
     public WishlistPage()
     {
         InitializeComponent();
-        RefreshWishlist();
     }
 
     public void RefreshWishlist()

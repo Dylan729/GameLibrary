@@ -16,9 +16,7 @@ namespace GameLibraryApp.Models
         public string Platform { get; set; } = string.Empty;
 
         public int ReleaseYear { get; set; }
-
         public double Rating { get; set; }
-
         public string Description { get; set; } = string.Empty;
 
         /// <summary>
@@ -26,9 +24,5 @@ namespace GameLibraryApp.Models
         /// </summary>
         public string ImageName { get; set; } = string.Empty;
 
-        /// <summary>
-        /// Indicates whether the game is in the user's wishlist.
-        /// </summary>
         public bool IsInWishlist { get; set; }
     }
-}

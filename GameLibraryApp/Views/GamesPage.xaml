@@ -95,12 +95,9 @@
                             </VerticalStackLayout>
 
                         </Grid>
-
                     </Border>
-
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-
         </CollectionView>
 
     </VerticalStackLayout>

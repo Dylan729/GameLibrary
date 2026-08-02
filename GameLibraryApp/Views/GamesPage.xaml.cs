@@ -1,4 +1,3 @@
-﻿using GameLibraryApp.Services;
 using GameLibraryApp.Models;
 
 namespace GameLibraryApp.Views;
@@ -11,8 +10,6 @@ public partial class GamesPage : ContentPage
     public GamesPage()
     {
         InitializeComponent();
-
-        _allGames = _service.GetGames();
         GenrePicker.SelectedIndex = 0;
 
         ApplyFilters();
@@ -52,20 +49,7 @@ public partial class GamesPage : ContentPage
                 { "Game", game }
             });
         }
-    }
 
-    private async void OnAddToWishlistClicked(object sender, EventArgs e)
-    {
-        if (sender is Button btn && btn.CommandParameter is GameItem game)
-        {
-            game.IsInWishlist = true;
 
-            await DisplayAlertAsync("Wishlist", $"{game.Title} added to wishlist.", "OK");
 
-            if (Shell.Current.CurrentPage is WishlistPage wishlistPage)
-            {
-                wishlistPage.RefreshWishlist();
-            }
-        }
-    }
 }

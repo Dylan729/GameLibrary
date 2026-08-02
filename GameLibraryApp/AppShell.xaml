@@ -9,8 +9,4 @@
         <ShellContent Title="Games"
                       ContentTemplate="{DataTemplate views:GamesPage}" />
 
-        <ShellContent Title="Wishlist"
-                      ContentTemplate="{DataTemplate views:WishlistPage}" />
-    </TabBar>
-
 </Shell>

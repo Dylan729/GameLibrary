@@ -20,7 +20,6 @@
                     Background="{AppThemeBinding Light='#FFF', Dark='#222'}"
                     StrokeShape="RoundRectangle 8">
 
-                    <VerticalStackLayout Spacing="4">
                         <Label 
                             Text="{Binding Title}"
                             FontAttributes="Bold"
