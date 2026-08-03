@@ -23,7 +23,6 @@
                 SelectedIndexChanged="OnGenreChanged">
             <Picker.Items>
                 <x:String>All Genres</x:String>
-                <x:String>Action</x:String>
                 <x:String>Adventure</x:String>
                 <x:String>Racing</x:String>
                 <x:String>Sports</x:String>
@@ -94,7 +93,6 @@
 
                             </VerticalStackLayout>
 
-                        </Grid>
                     </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
